@@ -1,0 +1,20 @@
+<!-- Responsive navbar. Toggle .open on the ul via JS. -->
+<nav class="rn">
+  <a class="rn-logo" href="#">Site</a>
+  <button class="rn-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">â˜°</button>
+  <ul class="rn-menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+<style>
+  .rn { display: flex; align-items: center; justify-content: space-between; padding: .75rem 1rem; }
+  .rn-menu { display: flex; gap: 1rem; list-style: none; }
+  .rn-toggle { display: none; background: none; border: 0; font-size: 1.5rem; cursor: pointer; }
+  @media (max-width: 640px) {
+    .rn-toggle { display: block; }
+    .rn-menu { display: none; flex-direction: column; width: 100%; }
+    .rn-menu.open { display: flex; }
+  }
+</style>
